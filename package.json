@@ -14,7 +14,8 @@
     "serve": "gatsby serve",
     "clean": "gatsby clean",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook",
+    "lint": "eslint \"**/*.{ts,tsx}\""
   },
   "dependencies": {
     "@emotion/react": "^11.4.0",

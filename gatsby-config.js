@@ -39,12 +39,6 @@ module.exports = {
       },
       eslint: {
         patterns: [
-          "**/*.{css,scss,less}",
-          "**/*.{json,json5}",
-          "**/*.{graphql}",
-          "**/*.{md,mdx}",
-          "**/*.{html}",
-          "**/*.{yaml,yml}",
         ], // string or array of paths/files/globs to include related only to ESLint
         ignorePatterns: [], // string or array of paths/files/globs to exclude related only to ESLint
         formatter: "stylish", // set custom or third party formatter
