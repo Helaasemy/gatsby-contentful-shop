@@ -2,17 +2,17 @@ import React from 'react';
 import styled from '@emotion/styled';
 import { theme } from '../../theme';
 
-const Devider = () => {
+const Devider = (height) => {
  
   const Hr = styled.hr`
-  height: 4px;
+  height: ${height.height}px;
   width: 100%;
   background-color: ${theme.colors.grey};
   border: none;
   `;
 
   return (
-        <Hr />
+        <Hr/>
   );
 };
 export default Devider;

@@ -19,7 +19,6 @@ export const useFeaturedData = () => {
               }
             }
             detail {
-              description
               dimmentions {
                 height
                 width

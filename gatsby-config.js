@@ -16,6 +16,15 @@ module.exports = {
   `gatsby-plugin-sharp`,
   `gatsby-transformer-sharp`,
   {
+    resolve: `gatsby-plugin-google-fonts`,
+    options: {
+      fonts: [
+        `Archivo\:100,200,300,500` // you can also specify font weights and styles
+      ],
+      display: 'swap'
+    }
+  },
+  {
     resolve: "gatsby-plugin-prettier-eslint",
     // this is the default configuration, override only what you need
     options: {

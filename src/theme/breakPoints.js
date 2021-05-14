@@ -1,4 +1,4 @@
-const breakpointsTheme = {
+const breakPoints = {
   min: {
     sm: '(min-width: 576px)',
     md: '(min-width: 768px)',
@@ -15,4 +15,4 @@ const breakpointsTheme = {
   },
 };
 
-export default breakpointsTheme;
+export default breakPoints;

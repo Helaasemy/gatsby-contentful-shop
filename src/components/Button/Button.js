@@ -2,7 +2,7 @@ import React from 'react';
 import styled from '@emotion/styled';
 import { theme } from '../../theme';
 
-const Button = ({ outlined, children }) => {
+const Button = ({ outlined, children, onClick }) => {
   const ButtonWrapper = styled.button`
     border: none;
     outline: none;
@@ -36,7 +36,7 @@ const Button = ({ outlined, children }) => {
         `}
   `;
   return (
-    <ButtonWrapper outlined={outlined}>
+    <ButtonWrapper outlined={outlined} onClick={onClick}>
       {children}
     </ButtonWrapper>
   );

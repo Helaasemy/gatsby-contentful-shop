@@ -1,4 +1,6 @@
-import React from 'react';
+import React, { useContext } from 'react';
+
+import { CartContext } from '../../context/CartContext';
 
 import Button from '../Button/Button'
 
@@ -7,6 +9,7 @@ import { theme } from '../../theme';
 
 
 const Featured = ({data}) => {
+
     const Heading = styled.div`
     display: flex;
     justify-content: space-between;
@@ -79,12 +82,18 @@ const Featured = ({data}) => {
     const image2 = data.detail.recommondation.image2.file.url;
     const image3 = data.detail.recommondation.image3.file.url;
 
+    const [cart, setCart] = useContext(CartContext);
+  const addToCart = () => {
+    const product = { data };
+    setCart(currentState => [...currentState, product]);
+  }
+
     return (
         <>
             <Heading>
                 <h1>{data.name}</h1>
                 <div>
-                    <Button> add to cart </Button>
+                    <Button onClick={addToCart}> add to cart </Button>
                 </div>
             </Heading>
             <ImageWrapper>
