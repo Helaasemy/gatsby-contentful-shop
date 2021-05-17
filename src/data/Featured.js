@@ -1,4 +1,4 @@
-import { useStaticQuery, graphql } from "gatsby"
+import { useStaticQuery, graphql } from 'gatsby';
 
 export const useFeaturedData = () => {
   const data = useStaticQuery(graphql`
@@ -12,6 +12,7 @@ export const useFeaturedData = () => {
             featured
             price
             currency
+            id
             image {
               file {
                 url
@@ -49,6 +50,6 @@ export const useFeaturedData = () => {
         }
       }
   }
-  `)
-    return data.allContentfulProducts.edges[0].node
-  }
+  `);
+  return data.allContentfulProducts.edges[0].node;
+};

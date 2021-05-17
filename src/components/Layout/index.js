@@ -9,12 +9,12 @@ export default function Layout({ children }) {
     margin: '0 5vw',
   });
   return (
-      <Container>
-        <Header />
-        <main>
-          {children}
-        </main>
-        <footer />
-      </Container>
+    <Container>
+      <Header />
+      <main>
+        {children}
+      </main>
+      <footer />
+    </Container>
   );
 }

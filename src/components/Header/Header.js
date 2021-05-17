@@ -1,13 +1,11 @@
-import React, {useState, useContext} from 'react';
+import React, { useState, useContext } from 'react';
 import styled from '@emotion/styled';
 import CartIcon from '../../icons/Cart';
 import Devider from '../Devider/Devider';
 import Logo from '../../icons/Logo';
 import ShoppingCart from '../ShoppingCart/ShoppingCart';
 import { theme } from '../../theme';
-import {CartContext} from '../../context/CartContext'
-
-
+import { CartContext } from '../../context/CartContext';
 
 const Header = () => {
   const Container = styled.div`
@@ -48,29 +46,29 @@ const Header = () => {
     }
   }
 `;
-  
 
   const [open, setOpen] = useState(false);
   const [cart, setCart] = useContext(CartContext);
   const showCart = () => {
     setOpen(false);
-  }
+  };
   return (
     <>
       <Container>
-        <Logo/>
+        <Logo />
         <CartIconWrapper>
-          <CartIcon onClick={() => setOpen(prev => !prev)}/>
+          <CartIcon onClick={() => setOpen((prev) => !prev)} />
           <div><span>{cart.length}</span></div>
         </CartIconWrapper>
-        {open &&    
+        {open
+      && (
       <CartWrapper>
-       <ShoppingCart onClick={showCart}/>
+        <ShoppingCart onClick={showCart} />
       </CartWrapper>
-        }
+      )}
       </Container>
       <div>
-        <Devider height='4' />
+        <Devider height="4" />
       </div>
     </>
   );

@@ -33,7 +33,10 @@ module.exports = {
         "import/no-extraneous-dependencies": "off",
         "import/prefer-default-export": "off",
         "react/jsx-filename-extension": "off",
-        "react/jsx-props-no-spreading": "off"
+        "react/jsx-props-no-spreading": "off",
+        "react/prop-types": "off",
+        "react/destructuring-assignment": "off",
+        "no-unused-vars": "off", 
     }, 
 
 };

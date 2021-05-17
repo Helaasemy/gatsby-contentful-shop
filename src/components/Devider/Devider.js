@@ -3,7 +3,6 @@ import styled from '@emotion/styled';
 import { theme } from '../../theme';
 
 const Devider = (height) => {
- 
   const Hr = styled.hr`
   height: ${height.height}px;
   width: 100%;
@@ -12,7 +11,7 @@ const Devider = (height) => {
   `;
 
   return (
-        <Hr/>
+    <Hr />
   );
 };
 export default Devider;

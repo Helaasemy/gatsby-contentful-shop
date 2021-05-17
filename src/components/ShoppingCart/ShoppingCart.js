@@ -4,11 +4,9 @@ import CloseIcon from '../../icons/CloseIcon';
 import Devider from '../Devider/Devider';
 import Button from '../Button/Button';
 import { theme } from '../../theme';
-import {CartContext} from '../../context/CartContext'
+import { CartContext } from '../../context/CartContext';
 
-
-
-const ShoppingCart = ({onClick}) => {
+const ShoppingCart = ({ onClick }) => {
   const CartContainer = styled.div`
    position: relative;
    padding: 10px
@@ -32,38 +30,41 @@ const ShoppingCart = ({onClick}) => {
       max-height: 68px;
   }
  `;
- const Title = styled.h2`
+  const Title = styled.h2`
  font-size: 20px;
  margin-top: 0;
   
  `;
- const Price = styled.p`
+  const Price = styled.p`
  margin-top: 0;
  color: ${theme.colors.greyDark};
  font-size: 21px;
   
  `;
 
-const [cart, setCart] = useContext(CartContext);
+  const [cart, setCart] = useContext(CartContext);
 
   return (
     <>
-     <CartContainer>
+      <CartContainer>
         <Icon onClick={onClick}>
-            <CloseIcon/>
+          <CloseIcon />
         </Icon>
-        {cart? cart.map((item, index) => 
-        <CartDetailsWrapper key={index}>
+        {cart ? cart.map((item) => (
+          <CartDetailsWrapper key={item.id}>
             <div>
-                <Title>{item.data.name}</Title>
-                <Price>${item.data.price}</Price>
+              <Title>{item.name}</Title>
+              <Price>
+                $
+                {item.price}
+              </Price>
             </div>
-            <img src={item.data.image.file.url} alt={item.data.name} />
-        </CartDetailsWrapper>
-        ) : <p>cart is empty</p>}
-        <Devider height="1"/>
+            <img src={item.image.file.url} alt={item.name} />
+          </CartDetailsWrapper>
+        )) : <p>cart is empty</p>}
+        <Devider height="1" />
         <Button outlined onClick={() => setCart('')}> Clear </Button>
-     </CartContainer>
+      </CartContainer>
     </>
   );
 };

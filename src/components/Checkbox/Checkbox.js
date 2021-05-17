@@ -47,7 +47,6 @@ display: flex;
       }
     }
   `;
-  console.log(checked);
   return (
     <Container>
       <CheckboxWrapper checked={checked}>
