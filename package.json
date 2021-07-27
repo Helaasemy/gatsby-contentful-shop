@@ -1,8 +1,8 @@
 {
-  "name": "benjamin",
+  "name": "shop",
   "version": "1.0.0",
   "private": true,
-  "description": "Benjamin",
+  "description": "contentful Shop",
   "author": "Hamza Elaasemy",
   "keywords": [
     "gatsby"

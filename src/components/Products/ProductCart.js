@@ -10,6 +10,7 @@ const ProductCart = ({products}) => {
   const Container = styled.div`
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-between;
 `;
   const Cart = styled.div`
  width: 282px; 

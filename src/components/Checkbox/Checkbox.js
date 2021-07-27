@@ -4,7 +4,7 @@ import { theme } from '../../theme';
 
 import CheckIcon from '../../icons/CheckIcon';
 
-const Checkbox = ({ label }) => {
+const Checkbox = ({ label, onChange }) => {
   const [checked, setChecked] = useState(false);
   const Container = styled.div`
   display: flex;
@@ -49,8 +49,8 @@ display: flex;
   `;
   return (
     <Container>
-      <CheckboxWrapper checked={checked}>
-        <input type="checkbox" onChange={() => setChecked(!checked)} />
+      <CheckboxWrapper checked={checked} onClick={() => setChecked(!checked)}>
+        <input value={label} type="checkbox" onChange={onChange} />
         <CheckIcon />
       </CheckboxWrapper>
       <p>{label}</p>
